@@ -1,0 +1,33 @@
+package com.example.myapplication.util;
+
+import android.content.Context;
+import android.graphics.Typeface;
+import android.util.AttributeSet;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+public class TextLight extends androidx.appcompat.widget.AppCompatTextView {
+    public TextLight(@NonNull Context context) {
+        super(context);
+
+        Typeface face= Typeface.createFromAsset(context.getAssets(), "fonts/TitilliumWebLight.ttf");
+        this.setTypeface(face);
+
+    }
+
+    public TextLight(@NonNull Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        Typeface face= Typeface.createFromAsset(context.getAssets(), "fonts/TitilliumWebLight.ttf");
+        this.setTypeface(face);
+    }
+
+    public TextLight(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+
+        Typeface face= Typeface.createFromAsset(context.getAssets(), "fonts/TitilliumWebLight.ttf");
+        this.setTypeface(face);
+    }
+
+
+}

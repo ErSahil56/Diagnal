@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.myapplication.ui.MainActivityViewModel" />
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/header_main"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/back"
+                    android:padding="@dimen/_16sdp"
+                    android:layout_alignParentLeft="true"
+
+                    />
+
+
+                <com.example.myapplication.util.TextRegular
+
+                    android:id="@+id/tv_header"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_toRightOf="@+id/img_back"
+                    android:layout_centerVertical="true"
+                    android:text="Romanctic Comedy"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp" />
+
+
+
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/search"
+                    android:padding="@dimen/_14sdp"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/header_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:visibility="gone"
+                >
+
+
+
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:saveEnabled="false"
+                    android:layout_toLeftOf="@+id/img_cross"
+                    android:background="@null"
+                    android:hint="search..."
+                    android:textColorHint="@color/colorMidGrey"
+
+                    />
+
+
+
+
+
+
+                <ImageView
+                    android:id="@+id/img_cross"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/search_cancel"
+                    android:padding="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
+
+
